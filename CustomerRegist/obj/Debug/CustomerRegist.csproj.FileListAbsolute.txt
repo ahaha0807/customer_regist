@@ -1,0 +1,11 @@
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\bin\Debug\CustomerRegist.exe.config
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\bin\Debug\CustomerRegist.exe
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\bin\Debug\CustomerRegist.pdb
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.csprojResolveAssemblyReference.cache
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.Login.resources
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.Properties.Resources.resources
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.csproj.GenerateResource.Cache
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.exe
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.pdb
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.menuList.resources
+c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.CustomerRegi.resources
