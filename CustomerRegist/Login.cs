@@ -56,9 +56,9 @@ namespace CustomerRegist
             {
                 loginInfo.Text = "ユーザー名・パスワードが間違っています";
             }
-           
 
-            
+
+
         }
     }
 }
