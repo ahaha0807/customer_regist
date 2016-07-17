@@ -19,6 +19,11 @@ namespace CustomerRegist
         InitializeComponent();
     }
 
+    public menuList()
+    {
+        InitializeComponent();
+    }
+
         private void logOut_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -27,9 +32,9 @@ namespace CustomerRegist
 
         private void customerRegi_Click(object sender, EventArgs e)
         {
-            this.Close();
-            customerRegi cl = new customerRegi(this);
-            cl.ShowDialog();
+            this.Hide();
+            customerRegi cr = new customerRegi(this);
+            cr.ShowDialog();
         }
 
         private void loginUserRegi_Click(object sender, EventArgs e)
