@@ -40,6 +40,7 @@
             // userNameBox
             // 
             this.userNameBox.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.userNameBox.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.userNameBox.Location = new System.Drawing.Point(33, 102);
             this.userNameBox.Name = "userNameBox";
             this.userNameBox.Size = new System.Drawing.Size(300, 31);

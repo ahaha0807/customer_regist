@@ -53,6 +53,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +105,7 @@
             this.customerData5.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.customerData5.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.customerData5.Location = new System.Drawing.Point(139, 28);
+            this.customerData5.MaxLength = 7;
             this.customerData5.Name = "customerData5";
             this.customerData5.Size = new System.Drawing.Size(200, 31);
             this.customerData5.TabIndex = 4;
@@ -123,6 +126,7 @@
             this.customerData10.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.customerData10.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.customerData10.Location = new System.Drawing.Point(169, 370);
+            this.customerData10.MaxLength = 11;
             this.customerData10.Name = "customerData10";
             this.customerData10.Size = new System.Drawing.Size(200, 31);
             this.customerData10.TabIndex = 2;
@@ -131,6 +135,7 @@
             // 
             this.customerData6.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.customerData6.FormattingEnabled = true;
+            this.customerData6.ImeMode = System.Windows.Forms.ImeMode.On;
             this.customerData6.Location = new System.Drawing.Point(139, 65);
             this.customerData6.Name = "customerData6";
             this.customerData6.Size = new System.Drawing.Size(200, 32);
@@ -168,6 +173,7 @@
             // 
             this.customerData8.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.customerData8.FormattingEnabled = true;
+            this.customerData8.ImeMode = System.Windows.Forms.ImeMode.On;
             this.customerData8.Location = new System.Drawing.Point(345, 102);
             this.customerData8.Name = "customerData8";
             this.customerData8.Size = new System.Drawing.Size(52, 32);
@@ -247,6 +253,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label2);
@@ -317,6 +324,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "登録";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -329,11 +337,36 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label7
+            // 
+            this.label7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label7.Location = new System.Drawing.Point(345, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(180, 30);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "※ハイフンなし数字７桁";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label8.Location = new System.Drawing.Point(372, 373);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(280, 30);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "※ハイフンなし数字10～11桁";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // CustomerRegi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -384,5 +417,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
