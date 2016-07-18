@@ -41,7 +41,7 @@ namespace CustomerRegist
                 if (data.GetString(1) == userPassBox.Text)
                 {
                     this.Hide();
-                    menuList ml = new menuList(this);
+                    MenuList ml = new MenuList(this);
                     ml.ShowDialog();
                     userNameBox.Text = "";
                     userPassBox.Text = "";

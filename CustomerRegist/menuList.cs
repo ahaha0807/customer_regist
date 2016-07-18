@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace CustomerRegist
 {
-    public partial class menuList : Form
+    public partial class MenuList : Form
     {
     private   Login login;
-    public menuList(Login login)
+    public MenuList(Login login)
     {
         this.login = login;
         InitializeComponent();
     }
 
-    public menuList()
+    public MenuList()
     {
         InitializeComponent();
     }
@@ -33,7 +33,7 @@ namespace CustomerRegist
         private void customerRegi_Click(object sender, EventArgs e)
         {
             this.Hide();
-            customerRegi cr = new customerRegi(this);
+            CustomerRegi cr = new CustomerRegi(this);
             cr.ShowDialog();
         }
 

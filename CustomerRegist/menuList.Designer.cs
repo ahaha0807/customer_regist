@@ -1,6 +1,6 @@
 ﻿namespace CustomerRegist
 {
-    partial class menuList
+    partial class MenuList
     {
         /// <summary>
         /// Required designer variable.
