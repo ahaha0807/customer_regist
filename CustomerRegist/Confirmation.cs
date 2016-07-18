@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace CustomerRegist
 {
@@ -49,7 +50,20 @@ namespace CustomerRegist
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                OleDbConnection connect = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=database_1.accdb;");
+                string sql = "INSERT INTO customerTable (name, name_kana, zipcode, prefectures, city, other_address, tel, birthday)"
+                    + "values (@name, @name_kana, @zipcode, @prefectures, @city, @other_address, @tel, @birthday)";
+                OleDbCommand command = new OleDbCommand(sql, connect);
 
+                connect.Open();
+                command.ExecuteReader();
+            }
+            catch (OleDbException)
+            {
+                submitInfo.Text = "登録に失敗しました。";
+            }
         }
 
         private void Back_Click(object sender, EventArgs e)

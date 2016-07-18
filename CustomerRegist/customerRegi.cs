@@ -39,12 +39,6 @@ namespace CustomerRegist
             this.menuList = menuList;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            menuList.Show();
-        }
-
         private void CustomerRegi_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < prefectures.Length; i++ )
@@ -57,9 +51,15 @@ namespace CustomerRegist
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cancel_Click(object sender, EventArgs e)
         {
-            if (null_check())
+            this.Close();
+            menuList.Show();
+        }
+
+        private void submit_Click(object sender, EventArgs e)
+        {
+            if (true)//null_check())
             {
                 string[] datas = { customerData1.Text, customerData2.Text, customerData3.Text,
                                     customerData4.Text, customerData5.Text, customerData6.Text,
@@ -70,7 +70,6 @@ namespace CustomerRegist
                 Confirmation cf = new Confirmation(this, datas);
                 cf.Show();
             }
-
         }
 
         private bool null_check()
@@ -78,91 +77,91 @@ namespace CustomerRegist
             Boolean flag = true;
             if (customerData1.Text == "")
             {
-                customerData1.BackColor = Color.Orange; flag=false;
+                customerData1.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData1.BackColor = Color.White; flag=true;
+                customerData1.BackColor = Color.White; flag = true;
             }
             if (customerData2.Text == "")
             {
-                customerData2.BackColor = Color.Orange; flag=false;
+                customerData2.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData2.BackColor = Color.White; flag=true;
+                customerData2.BackColor = Color.White; flag = true;
             }
             if (customerData3.Text == "")
             {
-                customerData3.BackColor = Color.Orange; flag=false;
+                customerData3.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData3.BackColor = Color.White; flag=true;
+                customerData3.BackColor = Color.White; flag = true;
             }
             if (customerData4.Text == "")
             {
-                customerData4.BackColor = Color.Orange; flag=false;
+                customerData4.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData4.BackColor = Color.White; flag=true;
+                customerData4.BackColor = Color.White; flag = true;
             }
             if (customerData5.Text == "")
             {
-                customerData5.BackColor = Color.Orange; flag=false;
+                customerData5.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData5.BackColor = Color.White; flag=true;
+                customerData5.BackColor = Color.White; flag = true;
             }
             if (customerData6.Text == "")
             {
-                customerData6.BackColor = Color.Orange; flag=false;
+                customerData6.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData6.BackColor = Color.White; flag=true;
+                customerData6.BackColor = Color.White; flag = true;
             }
             if (customerData7.Text == "")
             {
-                customerData7.BackColor = Color.Orange; flag=false;
+                customerData7.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData7.BackColor = Color.White; flag=true;
+                customerData7.BackColor = Color.White; flag = true;
             }
             if (customerData8.Text == "")
             {
-                customerData8.BackColor = Color.Orange; flag=false;
+                customerData8.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData8.BackColor = Color.White; flag=true;
+                customerData8.BackColor = Color.White; flag = true;
             }
             if (customerData9.Text == "")
             {
-                customerData9.BackColor = Color.Orange; flag=false;
+                customerData9.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData9.BackColor = Color.White; flag=true;
+                customerData9.BackColor = Color.White; flag = true;
             }
             if (customerData10.Text == "")
             {
-                customerData10.BackColor = Color.Orange; flag=false;
+                customerData10.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData10.BackColor = Color.White; flag=true;
+                customerData10.BackColor = Color.White; flag = true;
             }
             if (customerData11.Text == "")
             {
-                customerData11.BackColor = Color.Orange; flag=false;
+                customerData11.BackColor = Color.Orange; flag = false;
             }
             else
             {
-                customerData11.BackColor = Color.White; flag=true;
+                customerData11.BackColor = Color.White; flag = true;
             }
             return flag;
         }

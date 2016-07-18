@@ -47,13 +47,13 @@
             this.firstNameLabel2 = new System.Windows.Forms.Label();
             this.firstNameLabel1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.submit = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -271,6 +271,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "住所";
             // 
+            // label7
+            // 
+            this.label7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label7.Location = new System.Drawing.Point(345, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(180, 30);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "※ハイフンなし数字７桁";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // label6
             // 
             this.label6.Cursor = System.Windows.Forms.Cursors.Default;
@@ -315,39 +327,27 @@
             this.label1.Text = "郵便番号";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // submit
             // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 20F);
-            this.button1.Location = new System.Drawing.Point(466, 500);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 50);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "登録";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.submit.Font = new System.Drawing.Font("MS UI Gothic", 20F);
+            this.submit.Location = new System.Drawing.Point(466, 500);
+            this.submit.Name = "submit";
+            this.submit.Size = new System.Drawing.Size(150, 50);
+            this.submit.TabIndex = 4;
+            this.submit.Text = "登録";
+            this.submit.UseVisualStyleBackColor = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
-            // button2
+            // cancel
             // 
-            this.button2.Font = new System.Drawing.Font("MS UI Gothic", 20F);
-            this.button2.Location = new System.Drawing.Point(622, 500);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 50);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "キャンセル";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label7
-            // 
-            this.label7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label7.Location = new System.Drawing.Point(345, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(180, 30);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "※ハイフンなし数字７桁";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cancel.Font = new System.Drawing.Font("MS UI Gothic", 20F);
+            this.cancel.Location = new System.Drawing.Point(622, 500);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(150, 50);
+            this.cancel.TabIndex = 5;
+            this.cancel.Text = "キャンセル";
+            this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // label8
             // 
@@ -367,8 +367,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cancel);
+            this.Controls.Add(this.submit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.customerData11);
@@ -407,8 +407,8 @@
         private System.Windows.Forms.TextBox customerData7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Label lastNameLabel2;
         private System.Windows.Forms.Label lastNameLabel1;
         private System.Windows.Forms.Label firstNameLabel2;

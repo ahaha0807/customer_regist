@@ -41,6 +41,8 @@
             this.customerData3 = new System.Windows.Forms.TextBox();
             this.customerData1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.customerData8 = new System.Windows.Forms.Label();
+            this.customerData6 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,11 +50,10 @@
             this.customerData7 = new System.Windows.Forms.TextBox();
             this.customerData9 = new System.Windows.Forms.TextBox();
             this.customerData5 = new System.Windows.Forms.TextBox();
-            this.customerData6 = new System.Windows.Forms.Label();
-            this.customerData8 = new System.Windows.Forms.Label();
             this.customerData11 = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
             this.Submit = new System.Windows.Forms.Button();
+            this.submitInfo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -214,6 +215,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "住所";
             // 
+            // customerData8
+            // 
+            this.customerData8.Location = new System.Drawing.Point(345, 102);
+            this.customerData8.Name = "customerData8";
+            this.customerData8.Size = new System.Drawing.Size(60, 30);
+            this.customerData8.TabIndex = 13;
+            this.customerData8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // customerData6
+            // 
+            this.customerData6.Location = new System.Drawing.Point(139, 66);
+            this.customerData6.Name = "customerData6";
+            this.customerData6.Size = new System.Drawing.Size(160, 30);
+            this.customerData6.TabIndex = 12;
+            this.customerData6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label6
             // 
             this.label6.Cursor = System.Windows.Forms.Cursors.Default;
@@ -292,22 +309,6 @@
             this.customerData5.Size = new System.Drawing.Size(200, 31);
             this.customerData5.TabIndex = 4;
             // 
-            // customerData6
-            // 
-            this.customerData6.Location = new System.Drawing.Point(139, 66);
-            this.customerData6.Name = "customerData6";
-            this.customerData6.Size = new System.Drawing.Size(160, 30);
-            this.customerData6.TabIndex = 12;
-            this.customerData6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // customerData8
-            // 
-            this.customerData8.Location = new System.Drawing.Point(345, 102);
-            this.customerData8.Name = "customerData8";
-            this.customerData8.Size = new System.Drawing.Size(60, 30);
-            this.customerData8.TabIndex = 13;
-            this.customerData8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // customerData11
             // 
             this.customerData11.Font = new System.Drawing.Font("MS UI Gothic", 20F);
@@ -324,7 +325,7 @@
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(150, 50);
             this.Back.TabIndex = 1;
-            this.Back.Text = "キャンセル";
+            this.Back.Text = "戻る";
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
@@ -339,11 +340,22 @@
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
+            // submitInfo
+            // 
+            this.submitInfo.Font = new System.Drawing.Font("MS UI Gothic", 20F);
+            this.submitInfo.ForeColor = System.Drawing.Color.Coral;
+            this.submitInfo.Location = new System.Drawing.Point(7, 494);
+            this.submitInfo.Name = "submitInfo";
+            this.submitInfo.Size = new System.Drawing.Size(400, 30);
+            this.submitInfo.TabIndex = 19;
+            this.submitInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Confirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.submitInfo);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.customerData11);
             this.Controls.Add(this.Submit);
@@ -393,5 +405,6 @@
         private System.Windows.Forms.Label customerData11;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button Submit;
+        private System.Windows.Forms.Label submitInfo;
     }
 }
