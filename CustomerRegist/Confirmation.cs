@@ -15,6 +15,8 @@ namespace CustomerRegist
     {
         private CustomerRegi customerRegi;
         private string[] datas;
+        private Login login;
+        private MenuList menulist;
 
         public Confirmation()
         {
@@ -26,6 +28,15 @@ namespace CustomerRegist
             InitializeComponent();
             this.customerRegi = customerRegi;
             this.datas = datas;
+        }
+
+        public Confirmation(CustomerRegi customerRegi, string[] datas, Login login, MenuList menulist)
+        {
+            InitializeComponent();
+            this.customerRegi = customerRegi;
+            this.datas = datas;
+            this.login = login;
+            this.menulist = menulist;
         }
 
         private void Confirmation_Load(object sender, EventArgs e)
@@ -53,23 +64,53 @@ namespace CustomerRegist
             try
             {
                 OleDbConnection connect = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=database_1.accdb;");
-                string sql = "INSERT INTO customerTable (name, name_kana, zipcode, prefectures, city, other_address, tel, birthday)"
-                    + "values (@name, @name_kana, @zipcode, @prefectures, @city, @other_address, @tel, @birthday)";
+                string sql = "INSERT INTO customerTable (name, name_kana, zipcode, address, tel, birthday)"
+                    + "VALUES (@name, @name_kana, @zipcode, @address, @tel, @birthday)";
+
                 OleDbCommand command = new OleDbCommand(sql, connect);
 
+                command = Set_Values(command);
+
                 connect.Open();
-                command.ExecuteReader();
+                command.ExecuteNonQuery();
             }
             catch (OleDbException)
             {
-                submitInfo.Text = "登録に失敗しました。";
+                submitInfo.Text = "登録に失敗しました。入力内容を確認してください。";
             }
+                this.Close();
+                Completion cmp = new Completion(login, menulist);
+                cmp.Show();
         }
 
         private void Back_Click(object sender, EventArgs e)
         {
             this.Close();
             customerRegi.Show();
+        }
+
+        private OleDbCommand Set_Values(OleDbCommand _command){
+
+            OleDbCommand command = _command;
+
+            command.Parameters.Add("@name", OleDbType.VarChar);
+            command.Parameters["@name"].Value = customerData1.Text + customerData2.Text;
+
+            command.Parameters.Add("@name_kana", OleDbType.VarChar);
+            command.Parameters["@name_kana"].Value = customerData3.Text + customerData4.Text;
+
+            command.Parameters.Add("@zipcode", OleDbType.VarChar);
+            command.Parameters["@zipcode"].Value = customerData5.Text;
+
+            command.Parameters.Add("@address", OleDbType.VarChar);
+            command.Parameters["@address"].Value = customerData7.Text + customerData7.Text + customerData9.Text;
+
+            command.Parameters.Add("@tel", OleDbType.VarChar);
+            command.Parameters["@tel"].Value = customerData10.Text;
+            command.Parameters.Add("@birthday", OleDbType.VarChar);
+            command.Parameters["@birthday"].Value = customerData11.Text;
+            
+            return command;
         }
     }
 }

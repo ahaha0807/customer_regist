@@ -33,7 +33,7 @@ namespace CustomerRegist
         private void customerRegi_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CustomerRegi cr = new CustomerRegi(this);
+            CustomerRegi cr = new CustomerRegi(this, login);
             cr.ShowDialog();
         }
 

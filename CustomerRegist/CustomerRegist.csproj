@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Completion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Completion.Designer.cs">
+      <DependentUpon>Completion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Confirmation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Completion.resx">
+      <DependentUpon>Completion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Confirmation.resx">
       <DependentUpon>Confirmation.cs</DependentUpon>
     </EmbeddedResource>

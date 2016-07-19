@@ -46,6 +46,7 @@ namespace CustomerRegist
                     userNameBox.Text = "";
                     userPassBox.Text = "";
                     loginInfo.Text = "";
+                    connect.Close();
                 }
                 else
                 {

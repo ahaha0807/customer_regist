@@ -10,3 +10,4 @@ c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegis
 c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.menuList.resources
 c:\users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.CustomerRegi.resources
 C:\Users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.Confirmation.resources
+C:\Users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.Completion.resources

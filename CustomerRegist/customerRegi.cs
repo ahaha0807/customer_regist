@@ -28,6 +28,7 @@ namespace CustomerRegist
         private string[] city = {
                                     "市", "区", "町", "村"
                                 };
+        private Login login;
         public CustomerRegi()
         {
             InitializeComponent();
@@ -37,6 +38,13 @@ namespace CustomerRegist
         {
             InitializeComponent();
             this.menuList = menuList;
+        }
+
+        public CustomerRegi(MenuList menuList, Login login)
+        {
+            InitializeComponent();
+            this.menuList = menuList;
+            this.login = login;
         }
 
         private void CustomerRegi_Load(object sender, EventArgs e)
@@ -67,7 +75,7 @@ namespace CustomerRegist
                                     customerData10.Text, customerData11.Text
                                  };
                 this.Hide();
-                Confirmation cf = new Confirmation(this, datas);
+                Confirmation cf = new Confirmation(this, datas, login, menuList);
                 cf.Show();
             }
         }
