@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAddition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddition.Designer.cs">
+      <DependentUpon>AdminAddition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Completion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminAddition.resx">
+      <DependentUpon>AdminAddition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Completion.resx">
       <DependentUpon>Completion.cs</DependentUpon>
     </EmbeddedResource>

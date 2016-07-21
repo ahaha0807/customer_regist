@@ -39,7 +39,9 @@ namespace CustomerRegist
 
         private void loginUserRegi_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            AdminAddition aa = new AdminAddition(this, login);
+            aa.Show();
         }
     }
 }

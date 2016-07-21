@@ -67,7 +67,7 @@ namespace CustomerRegist
 
         private void submit_Click(object sender, EventArgs e)
         {
-            if (true)//null_check())
+            if (null_check())
             {
                 string[] datas = { customerData1.Text, customerData2.Text, customerData3.Text,
                                     customerData4.Text, customerData5.Text, customerData6.Text,
@@ -82,94 +82,98 @@ namespace CustomerRegist
 
         private bool null_check()
         {
-            Boolean flag = true;
-            if (customerData1.Text == "")
+            Boolean flag = false;
+            if (customerData1.Text == "" || customerData2.Text == "" || customerData3.Text == "" ||
+                customerData4.Text == "" || customerData5.Text == "" || customerData6.Text == "" ||
+                customerData7.Text == "" || customerData8.Text == "" || customerData9.Text == "" ||
+                customerData10.Text == "")
             {
-                customerData1.BackColor = Color.Orange; flag = false;
+                flag = false;
+                if (customerData1.Text == "")
+                {
+                    customerData1.BackColor = Color.Orange;
+                }
+                else
+                {
+                    customerData1.BackColor = Color.White;
+                }
+                if (customerData2.Text == "")
+                {
+                    customerData2.BackColor = Color.Orange;
+                }
+                else
+                {
+                    customerData2.BackColor = Color.White;
+                }
+                if (customerData3.Text == "")
+                {
+                    customerData3.BackColor = Color.Orange;
+                }
+                else
+                {
+                    customerData3.BackColor = Color.White;
+                }
+                if (customerData4.Text == "")
+                {
+                    customerData4.BackColor = Color.Orange;
+                }
+                else
+                {
+                    customerData4.BackColor = Color.White;
+                }
+                if (customerData5.Text == "")
+                {
+                    customerData5.BackColor = Color.Orange;
+                }
+                else
+                {
+                    customerData5.BackColor = Color.White;
+                }
+                if (customerData6.Text == "")
+                {
+                    customerData6.BackColor = Color.Orange;
+                }
+                else
+                {
+                    customerData6.BackColor = Color.White;
+                }
+                if (customerData7.Text == "")
+                {
+                    customerData7.BackColor = Color.Orange;
+                }
+                else
+                {
+                    customerData7.BackColor = Color.White;
+                }
+                if (customerData8.Text == "")
+                {
+                    customerData8.BackColor = Color.Orange;
+                }
+                else
+                {
+                    customerData8.BackColor = Color.White;
+                }
+                if (customerData9.Text == "")
+                {
+                    customerData9.BackColor = Color.Orange;
+                }
+                else
+                {
+                    customerData9.BackColor = Color.White;
+                }
+                if (customerData10.Text == "")
+                {
+                    customerData10.BackColor = Color.Orange;
+                }
+                else
+                {
+                    customerData10.BackColor = Color.White;
+                }
             }
             else
             {
-                customerData1.BackColor = Color.White; flag = true;
-            }
-            if (customerData2.Text == "")
-            {
-                customerData2.BackColor = Color.Orange; flag = false;
-            }
-            else
-            {
-                customerData2.BackColor = Color.White; flag = true;
-            }
-            if (customerData3.Text == "")
-            {
-                customerData3.BackColor = Color.Orange; flag = false;
-            }
-            else
-            {
-                customerData3.BackColor = Color.White; flag = true;
-            }
-            if (customerData4.Text == "")
-            {
-                customerData4.BackColor = Color.Orange; flag = false;
-            }
-            else
-            {
-                customerData4.BackColor = Color.White; flag = true;
-            }
-            if (customerData5.Text == "")
-            {
-                customerData5.BackColor = Color.Orange; flag = false;
-            }
-            else
-            {
-                customerData5.BackColor = Color.White; flag = true;
-            }
-            if (customerData6.Text == "")
-            {
-                customerData6.BackColor = Color.Orange; flag = false;
-            }
-            else
-            {
-                customerData6.BackColor = Color.White; flag = true;
-            }
-            if (customerData7.Text == "")
-            {
-                customerData7.BackColor = Color.Orange; flag = false;
-            }
-            else
-            {
-                customerData7.BackColor = Color.White; flag = true;
-            }
-            if (customerData8.Text == "")
-            {
-                customerData8.BackColor = Color.Orange; flag = false;
-            }
-            else
-            {
-                customerData8.BackColor = Color.White; flag = true;
-            }
-            if (customerData9.Text == "")
-            {
-                customerData9.BackColor = Color.Orange; flag = false;
-            }
-            else
-            {
-                customerData9.BackColor = Color.White; flag = true;
-            }
-            if (customerData10.Text == "")
-            {
-                customerData10.BackColor = Color.Orange; flag = false;
-            }
-            else
-            {
-                customerData10.BackColor = Color.White; flag = true;
-            }
-            if (customerData11.Text == "")
-            {
-                customerData11.BackColor = Color.Orange; flag = false;
-            }
-            else
-            {
-                customerData11.BackColor = Color.White; flag = true;
+               
+                flag = true;
             }
             return flag;
         }
