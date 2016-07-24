@@ -43,5 +43,12 @@ namespace CustomerRegist
             AdminAddition aa = new AdminAddition(this, login);
             aa.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminDelete ad = new AdminDelete(this);
+            ad.Show();
+        }
     }
 }

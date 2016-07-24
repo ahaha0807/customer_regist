@@ -56,6 +56,12 @@
     <Compile Include="AdminAddition.Designer.cs">
       <DependentUpon>AdminAddition.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDelete.Designer.cs">
+      <DependentUpon>AdminDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Completion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminAddition.resx">
       <DependentUpon>AdminAddition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDelete.resx">
+      <DependentUpon>AdminDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Completion.resx">
       <DependentUpon>Completion.cs</DependentUpon>
