@@ -121,9 +121,9 @@
             // 
             this.addUserInfo.Font = new System.Drawing.Font("MS UI Gothic", 20F);
             this.addUserInfo.ForeColor = System.Drawing.Color.Coral;
-            this.addUserInfo.Location = new System.Drawing.Point(29, 264);
+            this.addUserInfo.Location = new System.Drawing.Point(29, 235);
             this.addUserInfo.Name = "addUserInfo";
-            this.addUserInfo.Size = new System.Drawing.Size(468, 30);
+            this.addUserInfo.Size = new System.Drawing.Size(468, 72);
             this.addUserInfo.TabIndex = 8;
             this.addUserInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

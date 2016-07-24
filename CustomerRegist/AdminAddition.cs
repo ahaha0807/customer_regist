@@ -41,24 +41,34 @@ namespace CustomerRegist
                 if (addUserPass.Text == addUserPassConti.Text)
                 {
                     addUserInfo.Text = "";
+
+                    OleDbConnection connect = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=database_1.accdb;");
+                    OleDbCommand sql = new OleDbCommand("INSERT INTO loginTable(userName, userPass) VALUES(@name, @pass)", connect);
+
+                    sql.Parameters.Add("@name", OleDbType.VarChar);
+                    sql.Parameters["@name"].Value = addUserName.Text;
+                    sql.Parameters.Add("@pass", OleDbType.VarChar);
+                    sql.Parameters["@pass"].Value = addUserPass.Text;
+
+                    
                     try
                     {
-                        OleDbConnection connect = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=database_1.accdb;");
-                        OleDbCommand sql = new OleDbCommand("INSERT INTO loginTable(userName, userPass) VALUES(@name, @pass)", connect);
-
-                        sql.Parameters.Add("@name", OleDbType.VarChar);
-                        sql.Parameters["@name"].Value = addUserName.Text;
-                        sql.Parameters.Add("@pass", OleDbType.VarChar);
-                        sql.Parameters["@pass"].Value = addUserPass.Text;
-
                         connect.Open();
 
-                        sql.ExecuteNonQuery();
+                        if(sql.ExecuteNonQuery() != 0){
+                            this.Close();
+                            AddUserConf auc = new AddUserConf(menuList);
+                            auc.Show();
+                        }
 
                     }
-                    catch (InvalidOperationException)
+                    catch (OleDbException)
                     {
-
+                        addUserInfo.Text = "ユーザー名が既に存在しているため、登録できませんでした";
+                    }
+                    finally
+                    {
+                        connect.Close();
                     }
 
                     //登録されたがユーザーidが存在する場合エラーを吐く
