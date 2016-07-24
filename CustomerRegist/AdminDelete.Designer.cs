@@ -35,6 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.adminDeleteInfo = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.adminPassBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // adminUserNameBox
@@ -57,10 +59,10 @@
             // 
             this.adminDeleteButton.BackColor = System.Drawing.Color.Yellow;
             this.adminDeleteButton.Font = new System.Drawing.Font("MS UI Gothic", 20F);
-            this.adminDeleteButton.Location = new System.Drawing.Point(340, 210);
+            this.adminDeleteButton.Location = new System.Drawing.Point(340, 274);
             this.adminDeleteButton.Name = "adminDeleteButton";
             this.adminDeleteButton.Size = new System.Drawing.Size(200, 40);
-            this.adminDeleteButton.TabIndex = 2;
+            this.adminDeleteButton.TabIndex = 4;
             this.adminDeleteButton.Text = "ユーザー削除";
             this.adminDeleteButton.UseVisualStyleBackColor = false;
             this.adminDeleteButton.Click += new System.EventHandler(this.adminDeleteButton_Click);
@@ -69,12 +71,13 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 20F);
-            this.button1.Location = new System.Drawing.Point(134, 210);
+            this.button1.Location = new System.Drawing.Point(134, 274);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 40);
             this.button1.TabIndex = 3;
             this.button1.Text = "キャンセル";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -99,16 +102,37 @@
             // adminDeleteInfo
             // 
             this.adminDeleteInfo.Font = new System.Drawing.Font("MS UI Gothic", 20F);
-            this.adminDeleteInfo.Location = new System.Drawing.Point(32, 165);
+            this.adminDeleteInfo.Location = new System.Drawing.Point(40, 231);
             this.adminDeleteInfo.Name = "adminDeleteInfo";
             this.adminDeleteInfo.Size = new System.Drawing.Size(500, 40);
             this.adminDeleteInfo.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.label3.Location = new System.Drawing.Point(30, 185);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(200, 30);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "パスワード";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // adminPassBox
+            // 
+            this.adminPassBox.Font = new System.Drawing.Font("MS UI Gothic", 20F);
+            this.adminPassBox.Location = new System.Drawing.Point(251, 183);
+            this.adminPassBox.Name = "adminPassBox";
+            this.adminPassBox.PasswordChar = '●';
+            this.adminPassBox.Size = new System.Drawing.Size(250, 34);
+            this.adminPassBox.TabIndex = 2;
             // 
             // AdminDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 262);
+            this.ClientSize = new System.Drawing.Size(584, 362);
+            this.Controls.Add(this.adminPassBox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.adminDeleteInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -134,5 +158,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label adminDeleteInfo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox adminPassBox;
     }
 }

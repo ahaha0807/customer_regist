@@ -49,11 +49,11 @@ namespace CustomerRegist
 
         private void CustomerRegi_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < prefectures.Length; i++ )
+            for (int i = 0; i < prefectures.Length; i++ )   //都道府県コンボボックス初期化
             {
-                customerData6.Items.Add(prefectures[i]);
+                customerData6.Items.Add(prefectures[i]);    
             }
-            for (int i = 0; i < city.Length; i++)
+            for (int i = 0; i < city.Length; i++)           //市区町村コンボボックス初期化
             {
                 customerData8.Items.Add(city[i]);
             }
@@ -67,7 +67,7 @@ namespace CustomerRegist
 
         private void submit_Click(object sender, EventArgs e)
         {
-            if (null_check())
+            if (null_check())   //空文字チェックメソッド使用
             {
                 string[] datas = { customerData1.Text, customerData2.Text, customerData3.Text,
                                     customerData4.Text, customerData5.Text, customerData6.Text,
@@ -80,13 +80,17 @@ namespace CustomerRegist
             }
         }
 
-        private bool null_check()
+        private bool null_check()   //入力フォームのから文字チェックメソッド
         {
+            //どれかが空文字だと、入力欄の色が変わり、falseが返る
+            //すべて埋まっていれば入力欄は白色に代わり、trueが返る
+
             Boolean flag = false;
+
             if (customerData1.Text == "" || customerData2.Text == "" || customerData3.Text == "" ||
                 customerData4.Text == "" || customerData5.Text == "" || customerData6.Text == "" ||
                 customerData7.Text == "" || customerData8.Text == "" || customerData9.Text == "" ||
-                customerData10.Text == "")
+                customerData10.Text == "")  
             {
                 flag = false;
                 if (customerData1.Text == "")

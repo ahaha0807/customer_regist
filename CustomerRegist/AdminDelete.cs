@@ -28,41 +28,14 @@ namespace CustomerRegist
 
         private void adminDeleteButton_Click(object sender, EventArgs e)
         {
-            if (adminUserNameBox.Text != "")
+            if (adminUserNameBox.Text != "")    //ユーザー名が空でないか
             {
-                if (adminUserNameBox.Text == adminUserNameConti.Text)
+                if (adminUserNameBox.Text == adminUserNameConti.Text)   //二度入力したユーザ名が一致しているか
                 {
                     adminDeleteInfo.Text = "";
-
-                    OleDbConnection connect = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=database_1.accdb;");
-                    OleDbCommand sql = new OleDbCommand("DELETE FROM loginTable WHERE userName = @name", connect);
-
-                    sql.Parameters.Add("@name", OleDbType.VarChar);
-                    sql.Parameters["@name"].Value = adminUserNameBox.Text;
-
-                    try
-                    {
-                        connect.Open();
-
-                        if (sql.ExecuteNonQuery() != 0)
-                        {
-                            this.Close();
-                            AddUserConf auc = new AddUserConf(menuList);
-                            auc.Show();
-                        }
-
-                    }
-                    catch (OleDbException)
-                    {
-                        adminDeleteInfo.Text = "";
-                    }
-                    finally
-                    {
-                        connect.Close();
-                    }
-
-                    //登録されたがユーザーidが存在する場合エラーを吐く
-                    //もしくは、そのidのpwを編集する
+                    this.Hide();
+                    AdminDeleteConf adc = new AdminDeleteConf(this, adminUserNameBox, adminPassBox, menuList);
+                    adc.Show();
                 }
                 else
                 {
@@ -73,6 +46,12 @@ namespace CustomerRegist
             {
                 adminDeleteInfo.Text = "ユーザー名を空にすることはできません";
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            menuList.Show();
         }
     }
 }

@@ -62,6 +62,18 @@
     <Compile Include="AdminDelete.Designer.cs">
       <DependentUpon>AdminDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminDeleteComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDeleteComp.Designer.cs">
+      <DependentUpon>AdminDeleteComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDeleteConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDeleteConf.Designer.cs">
+      <DependentUpon>AdminDeleteConf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Completion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminDelete.resx">
       <DependentUpon>AdminDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDeleteComp.resx">
+      <DependentUpon>AdminDeleteComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDeleteConf.resx">
+      <DependentUpon>AdminDeleteConf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Completion.resx">
       <DependentUpon>Completion.cs</DependentUpon>

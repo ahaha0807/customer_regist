@@ -41,10 +41,10 @@ namespace CustomerRegist
 
         private void Confirmation_Load(object sender, EventArgs e)
         {
-            Data_Print();
+            Data_Print();   //入力されたデータを表示するメソッドの使用
         }
 
-        private void Data_Print()
+        private void Data_Print()   //前画面で入力されたデータを表示する
         {
             customerData1.Text = datas[0];
             customerData2.Text = datas[1];
@@ -89,7 +89,7 @@ namespace CustomerRegist
             customerRegi.Show();
         }
 
-        private OleDbCommand Set_Values(OleDbCommand _command){
+        private OleDbCommand Set_Values(OleDbCommand _command){ //DB登録時に必要な処理をひとまとめにしたメソッド
 
             OleDbCommand command = _command;
 

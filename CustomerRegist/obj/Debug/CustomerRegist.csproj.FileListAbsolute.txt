@@ -14,3 +14,5 @@ C:\Users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegis
 C:\Users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.AdminAddition.resources
 C:\Users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.AddUserConf.resources
 C:\Users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.AdminDelete.resources
+C:\Users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.AdminDeleteConf.resources
+C:\Users\yuki\documents\visual studio 2013\Projects\CustomerRegist\CustomerRegist\obj\Debug\CustomerRegist.AdminDeleteComp.resources

@@ -51,7 +51,7 @@
             this.logOut.Location = new System.Drawing.Point(450, 400);
             this.logOut.Name = "logOut";
             this.logOut.Size = new System.Drawing.Size(200, 40);
-            this.logOut.TabIndex = 2;
+            this.logOut.TabIndex = 3;
             this.logOut.Text = "ログアウト";
             this.logOut.UseVisualStyleBackColor = true;
             this.logOut.Click += new System.EventHandler(this.logOut_Click);
@@ -73,7 +73,7 @@
             this.button1.Location = new System.Drawing.Point(401, 160);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 50);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 2;
             this.button1.Text = "管理ユーザー削除";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

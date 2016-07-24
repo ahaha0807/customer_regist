@@ -36,9 +36,9 @@ namespace CustomerRegist
 
         private void submit_Click(object sender, EventArgs e)
         {
-            if (addUserName.Text != "")
+            if (addUserName.Text != "") //ユーザ名が空でないか
             {
-                if (addUserPass.Text == addUserPassConti.Text)
+                if (addUserPass.Text == addUserPassConti.Text)  //二度入力したPWが一致しているか
                 {
                     addUserInfo.Text = "";
 
@@ -55,7 +55,7 @@ namespace CustomerRegist
                     {
                         connect.Open();
 
-                        if(sql.ExecuteNonQuery() != 0){
+                        if(sql.ExecuteNonQuery() > 0){  //登録が成功したか
                             this.Close();
                             AddUserConf auc = new AddUserConf(menuList);
                             auc.Show();
@@ -71,9 +71,7 @@ namespace CustomerRegist
                         connect.Close();
                     }
 
-                    //登録されたがユーザーidが存在する場合エラーを吐く
-                    //もしくは、そのidのpwを編集する
-                }
+                    }
                 else
                 {
                     addUserInfo.Text = "入力されたパスワードが一致しません";
